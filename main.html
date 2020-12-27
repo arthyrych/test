@@ -6,7 +6,7 @@
 </head>
 <body>
     
-    <canvas id='canvas' width="200" height="200"></canvas>
+    <canvas id='canvas' width="500" height="500"></canvas>
 
 <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 
@@ -14,12 +14,20 @@
         
         let canvas = document.getElementById('canvas');
         let ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'MediumSeaGreen';
         ctx.fillRect(100, 0, 50, 50);
         ctx.fillRect(120, 50, 10, 20);
         ctx.fillRect(60, 70, 130, 10);
         ctx.fillRect(90, 80, 70, 60);
         ctx.fillRect(90, 140, 10, 50);
         ctx.fillRect(150, 140, 10, 50);
+
+        ctx.fillStyle = 'Navy';
+        ctx.fillRect(50, 200, 450, 150);
+        ctx.fillStyle = 'Gold';
+        ctx.fillRect(50, 350, 450, 150);
+        
+
 
 
 
