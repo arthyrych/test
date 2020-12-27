@@ -2,51 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sample</title>
+    <title>Canvas</title>
 </head>
 <body>
     
-    <h1>Playground</h1>
-    <p class="test">Test text</p>
-        
+    <canvas id='canvas' width="200" height="200"></canvas>
+
 <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 
     <script>
         
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        ctx.fillRect(100, 0, 50, 50);
+        ctx.fillRect(120, 50, 10, 20);
+        ctx.fillRect(60, 70, 130, 10);
+        ctx.fillRect(90, 80, 70, 60);
+        ctx.fillRect(90, 140, 10, 50);
+        ctx.fillRect(150, 140, 10, 50);
 
 
-    
-
-        let dog = {
-            name : 'Go',
-            sound : 'Gaw-gaw!',
-            speak : speak,
-            bark : function () {
-                console.log('Gaw-gaw! My name is ' + this.name + '!')
-            }
-        };
-
-        let cat = {
-            name : 'Joy',
-            speak : speak,
-            sound : 'Mew-mew!'
-        };
-
-        let pig = {
-            name : 'Charly',
-            speak : speak,
-            sound : 'Chr-chr-chr!'
-        };
-
-        let horse = {
-            name : 'Joo',
-            speak : speak,
-            sound : 'Igo-go-go!'
-        }
-
-        function speak () {
-            console.log(this.sound + ' Hello! My name is ' + this.name + '!');
-        };
 
     </script>
 </body>
