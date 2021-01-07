@@ -6,7 +6,7 @@
 </head>
 <body>
     
-    <canvas id='canvas' width="500" height="500"></canvas>
+    <canvas id='canvas' width="1000" height="1000"></canvas>
 
 <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 
@@ -16,7 +16,6 @@
         // entering our canvas
         let canvas = document.getElementById('canvas');
         let ctx = canvas.getContext('2d');
-
 
 
         // drawing X
@@ -69,21 +68,32 @@
         ctx.strokeStyle = 'Black';
         ctx.lineWidth = 4;
 
-        // head
+        // head with rectange
         ctx.strokeRect(300, 10, 20, 20);
+
+        // method to begin drawing lines
         ctx.beginPath();
 
         // body
         ctx.moveTo(310, 30);
         ctx.lineTo(310, 70);
 
-        // hands
-        ctx.moveTo(60, 10);
-        ctx.lineTo(10, 60);
+        // left hand
+        ctx.moveTo(290, 40);
+        ctx.lineTo(310, 45);
 
-        // legs
-        ctx.moveTo(60, 10);
-        ctx.lineTo(10, 60);
+        // right hand
+        ctx.moveTo(330, 40);
+        ctx.lineTo(310, 45);
+
+        // left leg
+        ctx.moveTo(310, 70);
+        ctx.lineTo(290, 95);
+
+        // right leg
+        ctx.moveTo(310, 70);
+        ctx.lineTo(330, 95);        
+
         // method to draw
         ctx.stroke();
 
