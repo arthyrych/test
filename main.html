@@ -14,9 +14,11 @@
         
         let canvas = document.getElementById('canvas');
         let ctx = canvas.getContext('2d');
+
+
+        // drawing X
         ctx.strokeStyle = 'Turquoise';
         ctx.lineWidth = 4;
-
         ctx.beginPath();
         ctx.moveTo(10, 10);
         ctx.lineTo(60, 60);
@@ -24,6 +26,8 @@
         ctx.lineTo(10, 60);
         ctx.stroke();
 
+
+        // drawing green stickman with rectangles
         ctx.fillStyle = 'MediumSeaGreen';
         ctx.strokeStyle = 'MediumSeaGreen';
         ctx.lineWidth = 10;
@@ -34,6 +38,20 @@
         ctx.fillRect(90, 140, 10, 50);
         ctx.fillRect(150, 140, 10, 50);
 
+
+        //drawing black stickman with lines
+        ctx.strokeStyle = 'Black';
+        ctx.lineWidth = 4;
+        ctx.strokeRect(300, 10, 20, 20);
+        ctx.beginPath();
+        ctx.moveTo(310, 30);
+        ctx.lineTo(310, 70);
+        ctx.moveTo(60, 10);
+        ctx.lineTo(10, 60);
+        ctx.stroke();
+
+
+        // drawing ua flag
         ctx.fillStyle = 'Navy';
         ctx.fillRect(50, 200, 450, 150);
         ctx.fillStyle = 'Gold';
