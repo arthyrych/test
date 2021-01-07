@@ -12,53 +12,90 @@
 
     <script>
         
+
+        // entering our canvas
         let canvas = document.getElementById('canvas');
         let ctx = canvas.getContext('2d');
 
 
+
         // drawing X
+        // selecting styles
         ctx.strokeStyle = 'Turquoise';
         ctx.lineWidth = 4;
+
+        // method to begin drawing lines
         ctx.beginPath();
+
+        // line from left top corner to right bottom corner
         ctx.moveTo(10, 10);
         ctx.lineTo(60, 60);
+
+        // line from top right corner to left bottom corner
         ctx.moveTo(60, 10);
         ctx.lineTo(10, 60);
+
+        // method to draw
         ctx.stroke();
 
 
         // drawing green stickman with rectangles
+        // selecting styles
         ctx.fillStyle = 'MediumSeaGreen';
         ctx.strokeStyle = 'MediumSeaGreen';
         ctx.lineWidth = 10;
+
+        // head with rectange
         ctx.strokeRect(100, 0, 50, 50);
+
+        // neck
         ctx.fillRect(120, 50, 10, 20);
+
+        // hands
         ctx.fillRect(60, 70, 130, 10);
+
+        // body
         ctx.fillRect(90, 80, 70, 60);
+
+        // left leg
         ctx.fillRect(90, 140, 10, 50);
+
+        // right leg
         ctx.fillRect(150, 140, 10, 50);
 
 
         //drawing black stickman with lines
+        // selecting styles
         ctx.strokeStyle = 'Black';
         ctx.lineWidth = 4;
+
+        // head
         ctx.strokeRect(300, 10, 20, 20);
         ctx.beginPath();
+
+        // body
         ctx.moveTo(310, 30);
         ctx.lineTo(310, 70);
+
+        // hands
         ctx.moveTo(60, 10);
         ctx.lineTo(10, 60);
+
+        // legs
+        ctx.moveTo(60, 10);
+        ctx.lineTo(10, 60);
+        // method to draw
         ctx.stroke();
 
 
         // drawing ua flag
+        // styles + filled rectangle
         ctx.fillStyle = 'Navy';
         ctx.fillRect(50, 200, 450, 150);
+        // styles + filled rectangle
         ctx.fillStyle = 'Gold';
         ctx.fillRect(50, 350, 450, 150);
         
-
-
 
 
     </script>
