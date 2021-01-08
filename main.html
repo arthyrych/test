@@ -117,6 +117,27 @@
         ctx.fill();
 
 
+        // drawing circles
+        // styles
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = 'Green';
+
+        // drawing 1/4 of a circle
+        ctx.beginPath();
+        ctx.arc(250, 150, 20, 0, Math.PI / 2, false);
+        ctx.stroke();
+
+        // drawing 1/2 of a circle
+        ctx.beginPath();
+        ctx.arc(290, 150, 20, 0, Math.PI, false);
+        ctx.stroke();
+
+        // drawing a circle
+        ctx.beginPath();
+        ctx.arc(330, 150, 20, 0, Math.PI * 2, false);
+        ctx.stroke();
+
+
         // drawing ua flag
         // styles + filled rectangle
         ctx.fillStyle = 'Navy';
@@ -124,7 +145,6 @@
         // styles + filled rectangle
         ctx.fillStyle = 'Gold';
         ctx.fillRect(50, 350, 450, 150);
-        
 
 
     </script>
