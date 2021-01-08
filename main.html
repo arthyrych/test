@@ -124,7 +124,7 @@
 
         // drawing 1/4 of a circle
         ctx.beginPath();
-        ctx.arc(250, 150, 20, 0, Math.PI / 2, false);
+        ctx.arc(250, 150, 20, 0, Math.PI / 2, true);
         ctx.stroke();
 
         // drawing 1/2 of a circle
@@ -138,6 +138,19 @@
         ctx.stroke();
 
 
+        // creating a circle function
+        function circle (x, y, r) {
+            ctx.beginPath();
+            ctx.arc(x, y, r, 0, Math.PI * 2, false);
+            ctx.stroke();
+        };
+
+        // draing circles with the function
+        circle(370, 150, 20);
+        circle(410, 150, 20);       
+        circle(450, 150, 20); 
+
+
         // drawing ua flag
         // styles + filled rectangle
         ctx.fillStyle = 'Navy';
@@ -145,6 +158,9 @@
         // styles + filled rectangle
         ctx.fillStyle = 'Gold';
         ctx.fillRect(50, 350, 450, 150);
+
+
+
 
 
     </script>
