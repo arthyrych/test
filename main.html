@@ -149,27 +149,22 @@
             }
         };
 
+
         // draing circles with the function
         ctx.lineWidth = 4;
 
         ctx.fillStyle = 'Purple';
         circle(450, 150, 35, true);
-
         ctx.fillStyle = 'Blue';
         circle(450, 150, 30, true);
-
         ctx.fillStyle = 'LightBlue';
         circle(450, 150, 25, true); 
-
         ctx.fillStyle = 'Green';
         circle(450, 150, 20, true); 
-
         ctx.fillStyle = 'Yellow';
         circle(450, 150, 15, true);
-
         ctx.fillStyle = 'Orange';
         circle(450, 150, 10, true); 
-
         ctx.fillStyle = 'Red';
         circle(450, 150, 5, true);
 
@@ -196,6 +191,53 @@
         ctx.fillStyle = 'Orange';
         circle(550, 50, 5, true);
 
+
+        // creating a snowman function
+        function drawSnowman (x, y) {
+            // styles
+            ctx.lineWidth = 4;
+
+            ctx.fillStyle = 'Black';
+            ctx.strokeStyle = 'Black';
+
+            // head
+            circle(x, y, 30);
+            circle(x - 10, y - 10, 5, true);
+            circle(x + 10, y - 10, 5, true);
+
+            // body
+            circle(x, y + 70, 40);
+            circle(x, y + 50, 5, true);
+            circle(x, y + 70, 5, true);
+            circle(x, y + 90, 5, true);
+
+            // nose
+            ctx.fillStyle = 'Orange';
+            circle(x, y, 5, true);
+        };
+
+
+        // drawing a snowman with a function
+        drawSnowman(700, 350);
+        drawSnowman(150, 550);
+        drawSnowman(350, 700);
+
+
+        // creating a drawing function with an array
+        function drawPoints (points) {
+            ctx.lineWidth = 5;
+            ctx.strokeStyle = 'Black';
+            ctx.beginPath();
+            ctx.moveTo(points[0][0], points[0][1]);
+            for (i = 0; i <= points.length; i++) {
+                ctx.lineTo(points[i][0], points[i][1]);
+            };
+            ctx.stroke();
+        };
+
+        let mysteryPoints = [[50, 50], [50, 100], [25, 120], [100, 50], [70, 90], [100, 90], [70, 120]];
+
+        drawPoints(mysteryPoints);
 
         // drawing ua flag
         // styles + filled rectangle
