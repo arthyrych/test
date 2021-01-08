@@ -139,35 +139,62 @@
 
 
         // creating a circle function
-        function circle (x, y, r) {
+        function circle (x, y, r, fillCircle) {
             ctx.beginPath();
             ctx.arc(x, y, r, 0, Math.PI * 2, false);
-            ctx.stroke();
+            if (fillCircle) {
+                ctx.fill();
+            } else {
+                ctx.stroke();
+            }
         };
 
         // draing circles with the function
         ctx.lineWidth = 4;
 
-        ctx.strokeStyle = 'Red';
-        circle(450, 150, 5);
+        ctx.fillStyle = 'Purple';
+        circle(450, 150, 35, true);
 
-        ctx.strokeStyle = 'Orange';
-        circle(450, 150, 10);      
+        ctx.fillStyle = 'Blue';
+        circle(450, 150, 30, true);
 
-        ctx.strokeStyle = 'Yellow';
-        circle(450, 150, 15);
+        ctx.fillStyle = 'LightBlue';
+        circle(450, 150, 25, true); 
 
-        ctx.strokeStyle = 'Green';
-        circle(450, 150, 20); 
+        ctx.fillStyle = 'Green';
+        circle(450, 150, 20, true); 
 
-        ctx.strokeStyle = 'LightBlue';
-        circle(450, 150, 25); 
+        ctx.fillStyle = 'Yellow';
+        circle(450, 150, 15, true);
 
-        ctx.strokeStyle = 'Blue';
-        circle(450, 150, 30);
+        ctx.fillStyle = 'Orange';
+        circle(450, 150, 10, true); 
 
-        ctx.strokeStyle = 'Purple';
-        circle(450, 150, 35);
+        ctx.fillStyle = 'Red';
+        circle(450, 150, 5, true);
+
+
+        // drawing a snowman with the circle function
+        // styles
+        ctx.lineWidth = 4;
+
+        ctx.fillStyle = 'Black';
+        ctx.strokeStyle = 'Black';
+
+        // head
+        circle(550, 50, 30);
+        circle(540, 40, 5, true);
+        circle(560, 40, 5, true);
+
+        // body
+        circle(550, 120, 40);
+        circle(550, 100, 5, true);
+        circle(550, 120, 5, true);
+        circle(550, 140, 5, true);
+
+        // nose
+        ctx.fillStyle = 'Orange';
+        circle(550, 50, 5, true);
 
 
         // drawing ua flag
@@ -177,9 +204,6 @@
         // styles + filled rectangle
         ctx.fillStyle = 'Gold';
         ctx.fillRect(50, 350, 450, 150);
-
-
-
 
 
     </script>
