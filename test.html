@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ball</title>
+    <title>Test</title>
 </head>
 <body>
     
@@ -10,48 +10,8 @@
 
 
     <script>
-        
-        
-        function Ball() {
-            this.x = 100;
-            this.y = 100;
-            this.xSpeed = -2;
-            this.ySpeed = 3;
-        };
-   
-        
-        function circle(x, y, radius, fillCircle) {
-            ctx.beginPath();
-            ctx.arc(x, y, radius, 0, Math.PI * 2, false);
-            if (fillCircle) {
-                ctx.fill();
-            } else {
-                ctx.stroke();
-            }
-        };
 
-
-        Ball.prototype.draw = function() {
-            circle(this.x, this.y, 3, true);
-        };
-
-
-        Ball.prototype.move = function() {
-            this.x += this.xSpeed;
-            this.y += this.ySpeed;
-        };
-
-
-        Ball.prototype.checkCollision = function() {
-            if (this.x < 0 || this.x > 200) {
-                this.xSpeed = -this.xSpeed;
-            }
-            if (this.y < 0 || this.y > 200) {
-                this.ySpeed = -this.ySpeed;
-            }
-        };
-
-
+       
         
 
     </script>
