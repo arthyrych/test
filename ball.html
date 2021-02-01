@@ -21,11 +21,11 @@
 
         let colors = ["Red", "Orange", "Yellow", "Green", "Blue", "Navy", "Purple"];
 
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 9; i++) {
             balls += new Ball;
         }
 
-        //let ball = new Ball;
+        let ball = new Ball;
 
 
         setInterval(function() {
@@ -35,12 +35,18 @@
 
             for (let y = 0; y < balls.length; y++) {
 
-                balls[y].draw();
-                balls[y].move();
-                balls[y].checkCollision();
+                ball.draw();
+                ball.move();
+                ball.checkCollision();
 
-            }
+            } 
 
+
+            /*
+            ball.draw();
+            ball.move();
+            ball.checkCollision();
+            */
 
             ctx.strokeRect(0, 0, canvasWidth, canvasHeight);
         }, 20);
